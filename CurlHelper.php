@@ -210,8 +210,8 @@ class CurlHelper
             curl_setopt($this->ch, CURLOPT_CUSTOMREQUEST, 'GET');
         }
 
-        if ($this->hasOption('interface')) {
-            curl_setopt($this->ch, CURLOPT_INTERFACE, $this->getInterface());
+        if ($this->hasOption('interface') && $interface = $this->getInterface()) {
+            curl_setopt($this->ch, CURLOPT_INTERFACE, $interface);
         }
 
         if ($this->hasOption('cookiejar')) {
@@ -291,7 +291,7 @@ class CurlHelper
     {
         $interfaceOption = $this->getOption('interface');
 
-        if (is_array($interfaceOption)) {
+        if (is_array($interfaceOption) && !empty($interfaceOption)) {
             $count      = count($interfaceOption);
             $key        = mt_rand(0, $count - 1);
 
