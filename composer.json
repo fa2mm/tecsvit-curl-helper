@@ -1,0 +1,22 @@
+{
+    "name": "tecsvit/curl-helper",
+    "description": "Curl Helper",
+    "type": "library",
+    "keywords": ["parser"," crawler"," cUrl"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "fa2m",
+            "email": "2day@ua.fm"
+        }
+    ],
+    "require": {
+        "tecsvit/object-helper": "*",
+        "tecsvit/public-errors": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "\\tecsvit\\": ""
+        }
+    }
+}
