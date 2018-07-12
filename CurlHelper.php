@@ -1,6 +1,6 @@
 <?php
 
-namespace \tecsvit;
+namespace tecsvit;
 
 /**
  * Class CurlHelper
